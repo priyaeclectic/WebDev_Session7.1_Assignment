@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title> Assignment 7.1 </title>
+</head>
+<body>
+
+	<input type="button" value="Increment" onclick="increaseglobalCount()"><br>
+	<div id="info"></div>
+</body>
+<script type="text/javascript">
+	var globalVar;
+	function increaseglobalCount()
+	{
+		if(isNaN(globalVar)){
+			globalVar=0;
+		}
+		globalVar=globalVar+increaseCount();		//calls increment function and increases global count from it
+		document.getElementById("info").innerHTML="globalVar is "+globalVar;
+	}
+													// increase count of a local count variable
+	function increaseCount() 
+	{
+	    var count;
+	    if (isNaN(count)){
+	    	count=0;
+	    }
+	    count=count+1;
+	    return count;
+	}    
+</script>
+</html>
